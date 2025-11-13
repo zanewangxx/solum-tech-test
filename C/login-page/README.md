@@ -38,5 +38,6 @@ The task was to build a simple **login page** using React, with client-side vali
 ```bash
 cd C
 npm install
-npm run dev
+npm run dev OR npm run dev -- --host
+
 
