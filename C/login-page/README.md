@@ -33,11 +33,24 @@ The task was to build a simple **login page** using React, with client-side vali
 - **JavaScript (ES6+)**
 - **Optional:** Tailwind CSS or pure CSS for styling
 
-
+## Simulated user list
+<pre>
+Email - Password
+"test1@example.com": "Test1111!"
+"test2@example.com": "Test2222!"
+</pre>
 ## Run Locally
 ```bash
-cd C
+Open your terminal and navigate to the project folder
+cd C, cd login-page
 npm install
-npm run dev OR npm run dev -- --host
+npm run dev OR npm run dev -- --host (for mobile device)
 
+After running the command, you’ll see an output like:
+Local:   http://localhost:5173/
+Network: http://192.168.x.x:5173/
 
+Now open the browser and visit http://localhost:5173/
+Mobile device: Copy the Network URL from the terminal output (for example:
+http://192.168.x.x:5173)
+Open a browser like Safari or Chrome on the phone and visit that address.

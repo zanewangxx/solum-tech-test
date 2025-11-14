@@ -2,14 +2,15 @@ import { useState } from 'react'
 import LoginForm from './components/LoginForm'
 
 function App() {
+  //login state and email
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [userEmail, setUserEmail] = useState('')
-
+  //when login success
   const handleLoginSuccess = (email) => {
     setIsLoggedIn(true)
     setUserEmail(email)
   }
-
+  //reset state when logout
   const handleLogout = () => {
     setIsLoggedIn(false)
     setUserEmail('')
@@ -25,7 +26,7 @@ function App() {
             Welcome, <span className="text-blue-600">{userEmail}</span>!
           </h2>
           <p className="text-gray-600 text-sm">
-            You’ve successfully logged in.
+            You've successfully logged in.
           </p>
           <button
             onClick={handleLogout}

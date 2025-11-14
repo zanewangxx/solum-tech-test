@@ -2,16 +2,17 @@ import React, { useState } from "react"
 import Notification from "./Notification"
 
 const LoginForm = ({ onLoginSuccess }) => {
+  //component state
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
   const [notification, setNotification] = useState({ type: "", message: "" })
-
+  //hardcode user list
   const validUsers = {
     "test1@example.com": "Test1111!",
     "test2@example.com": "Test2222!",
   }
-
+  //password rules
   const validatePassword = (password) => {
     const lengthOk = password.length >= 8 && password.length <= 16
     const hasUpper = /[A-Z]/.test(password)
@@ -20,12 +21,12 @@ const LoginForm = ({ onLoginSuccess }) => {
     const hasSymbol = /[!@#$%^&*(),.?":{}|<>]/.test(password)
     return lengthOk && hasUpper && hasLower && hasNumber && hasSymbol
   }
-
+  //notification
   const showNotification = (type, message, duration = 2000) => {
     setNotification({ type, message })
     setTimeout(() => setNotification({ type: "", message: "" }), duration)
   }
-
+  //login form handling
   const handleSubmit = (e) => {
     e.preventDefault()
 
